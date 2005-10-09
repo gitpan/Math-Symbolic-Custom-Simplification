@@ -6,7 +6,7 @@ use warnings;
 use Carp qw/cluck confess/;
 use Math::Symbolic;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 our @Simplification_Stack;
 our %Registered;
@@ -140,6 +140,21 @@ the default C<simplify()>) is restored.
 =head2 EXPORT
 
 This module does not export anything.
+
+=head2 METHODS
+
+=over 2
+
+=item register
+
+A class method to register the C<simplify()> subroutine of the class as the
+new Math::Symbolic simplification rotuine.
+
+=item unregister
+
+A class method to unregister the aformentioned simplification routine.
+
+=back
 
 =head1 SEE ALSO
 
